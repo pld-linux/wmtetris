@@ -1,15 +1,15 @@
 Summary:	Tetris game for the WindowMaker dock
 Summary(pl):	Gra Tetris dla Doku WindowMakera
 Name:		wmtetris
-Version:	0.1
-Release:	3
+Version:	0.2
+Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
-Source0:	http://people.cornell.edu/pages/srs25/tumbolia/wmtetris/%{name}-%{version}.tar.gz
-# Source0-md5:	de7f6fd9c323496b71c1aaf211ca595f
+Source0:	http://www.fi.muni.cz/~xmichal5/wmaker/%{name}-%{version}.tar.gz
+# Source0-md5:	711788e12a589e4733304a1a82c1fca2
 Source1:	%{name}.desktop
 Patch0:		%{name}-makefile.patch
-URL:		http://people.cornell.edu/pages/srs25/tumbolia/wmtetris.html
+URL:		http://www.dockapps.org/file.php/id/106
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,24 +22,25 @@ Gra Tetris dla Doku WindowMakera.
 
 %prep
 %setup -q
-%patch -p0
+%patch -p1
 
 %build
-%{__make} -C %{name} CFLAGS="%{rpmcflags}"
+%{__make} -C %{name} \
+	OPT="%{rpmcflags}" \
+	CC="%{__cc}" 
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_applnkdir}/DockApplets}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir}/docklets}
 
 install %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
-#install %{SOURCE1}	$RPM_BUILD_ROOT%{_applnkdir}/DockApplets
-
+install %{SOURCE1}	$RPM_BUILD_ROOT%{_desktopdir}/docklets
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README
+%doc AUTHORS Changelog README
 %attr(755,root,root) %{_bindir}/%{name}
-#%%{_applnkdir}/DockApplets/wmtetris.desktop
+%{_desktopdir}/docklets/wmtetris.desktop
