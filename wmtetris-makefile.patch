@@ -1,21 +1,15 @@
---- wmtetris/Makefile~	Sat Aug 15 05:41:00 1998
-+++ wmtetris/Makefile	Thu Jul  8 02:55:13 1999
-@@ -1,13 +1,15 @@
- LIBDIR = -L/usr/X11R6/lib
- LIBS   = -lXpm -lXext
- OBJS   =  wmtetris.o \
--	  ../wmgeneral/wmgeneral.o \
-+	  ../wmgeneral/wmgeneral.o
-+INCDIR = -I/usr/X11R6/include
-+CFLAGS = -O
+--- wmtetris-0.2/wmtetris/Makefile.orig	2004-08-15 15:57:55.000000000 +0200
++++ wmtetris-0.2/wmtetris/Makefile	2004-08-15 15:58:52.000000000 +0200
+@@ -5,10 +5,10 @@
+ CC	= gcc
  
  wmtetris: $(OBJS)
--	cc -O -o wmtetris $^ $(LIBDIR) $(LIBS)
-+	cc $(CFLAGS) -o wmtetris $^ $(LIBDIR) $(LIBS)
+-	$(CC) -O -o wmtetris $^ $(LIBDIR) $(LIBS)
++	$(CC) $(OPT) -o wmtetris $^ $(LIBDIR) $(LIBS)
  
  %.o:	%.c
--	cc -O -c -o $@ $<
-+	cc $(CFLAGS) $(INCDIR) -c -o $@ $<
+-	$(CC) -O -c -o $@ $<
++	$(CC) $(OPT) -c -o $@ $<
  
- clean:
- 	for i in $(OBJS) ; do \
+ install:
+ 	cp wmtetris /usr/local/bin
