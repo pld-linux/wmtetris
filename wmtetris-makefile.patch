@@ -1,0 +1,21 @@
+--- wmtetris/Makefile~	Sat Aug 15 05:41:00 1998
++++ wmtetris/Makefile	Thu Jul  8 02:55:13 1999
+@@ -1,13 +1,15 @@
+ LIBDIR = -L/usr/X11R6/lib
+ LIBS   = -lXpm -lXext
+ OBJS   =  wmtetris.o \
+-	  ../wmgeneral/wmgeneral.o \
++	  ../wmgeneral/wmgeneral.o
++INCDIR = -I/usr/X11R6/include
++CFLAGS = -O
+ 
+ wmtetris: $(OBJS)
+-	cc -O -o wmtetris $^ $(LIBDIR) $(LIBS)
++	cc $(CFLAGS) -o wmtetris $^ $(LIBDIR) $(LIBS)
+ 
+ %.o:	%.c
+-	cc -O -c -o $@ $<
++	cc $(CFLAGS) $(INCDIR) -c -o $@ $<
+ 
+ clean:
+ 	for i in $(OBJS) ; do \

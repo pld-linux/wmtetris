@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=wmtetris
+Comment=Tetris game
+Comment[pl]=Gra Tetris
+Exec=wmtetris
+Terminal=0
+Type=Application
