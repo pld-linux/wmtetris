@@ -13,7 +13,6 @@ URL:		http://people.cornell.edu/pages/srs25/tumbolia/wmtetris.html
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define 	_prefix		/usr/X11R6
 
 %description
 Tetris game for the WindowMaker dock.
