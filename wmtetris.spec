@@ -12,10 +12,9 @@ Source1:	wmtetris.desktop
 Patch:		wmtetris-makefile.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 Tetris game for the WindowMaker dock.
