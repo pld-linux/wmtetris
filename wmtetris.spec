@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://people.cornell.edu/pages/srs25/tumbolia/wmtetris/%{name}-%{version}.tar.gz
+# Source0-md5:	de7f6fd9c323496b71c1aaf211ca595f
 Source1:	%{name}.desktop
 Patch0:		%{name}-makefile.patch
 URL:		http://people.cornell.edu/pages/srs25/tumbolia/wmtetris.html
