@@ -27,7 +27,7 @@ Gra Tetris dla Doku WindowMakera.
 %patch -p0
 
 %build
-make -C %{name} CFLAGS="$RPM_OPT_FLAGS"
+%{__make} -C %{name} CFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
