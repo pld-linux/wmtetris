@@ -46,8 +46,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.gz
 %attr(755,root,root) %{_bindir}/%{name}
 /etc/X11/applnk/DockApplets/wmtetris.desktop
-
-%changelog
-* Tue May 25 1999 Piotr Czerwiñski <pius@pld.org.pl> 
-  [0.1-1]
-- initial RPM release.
