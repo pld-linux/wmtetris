@@ -11,7 +11,6 @@ Source0:	http://people.cornell.edu/pages/srs25/tumbolia/wmtetris/%{name}-%{versi
 Source1:	wmtetris.desktop
 Patch:		wmtetris-makefile.patch
 BuildRequires:	XFree86-devel
-BuildRequires:	xpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
