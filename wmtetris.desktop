@@ -3,6 +3,6 @@ Name=WmTetris
 Comment=Tetris game
 Comment[pl]=Gra Tetris
 Exec=wmtetris
-Terminal=0
+Terminal=false
 Type=Application
 # vi: encoding=utf-8
