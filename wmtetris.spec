@@ -7,7 +7,7 @@ Copyright:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 URL:		http://people.cornell.edu/pages/srs25/tumbolia/wmtetris.html
-Source0:	%{name}-%{version}.tar.gz
+Source0:	http://people.cornell.edu/pages/srs25/tumbolia/wmtetris/%{name}-%{version}.tar.gz
 Source1:	wmtetris.desktop
 Patch:		wmtetris-makefile.patch
 BuildRequires:	XFree86-devel
