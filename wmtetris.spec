@@ -10,8 +10,8 @@ URL:		http://people.cornell.edu/pages/srs25/tumbolia/wmtetris.html
 Source0:	%{name}-%{version}.tar.gz
 Source1:	wmtetris.desktop
 Patch:		wmtetris-makefile.patch
-BuildPrereq:	XFree86-devel
-BuildPrereq:	xpm-devel
+BuildRequires:	XFree86-devel
+BuildRequires:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define _prefix	/usr/X11R6
