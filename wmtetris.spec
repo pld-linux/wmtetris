@@ -2,7 +2,7 @@ Summary:	Tetris game for the WindowMaker dock
 Summary(pl):	Gra Tetris dla Doku WindowMakera
 Name:		wmtetris
 Version:	0.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.fi.muni.cz/~xmichal5/wmaker/%{name}-%{version}.tar.gz
@@ -27,7 +27,8 @@ Gra Tetris dla Doku WindowMakera.
 %build
 %{__make} -C %{name} \
 	OPT="%{rpmcflags}" \
-	CC="%{__cc}" 
+	CC="%{__cc}" \
+	LIBDIR="-L/usr/X11R6/%{_lib}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
