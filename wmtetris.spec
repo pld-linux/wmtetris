@@ -31,10 +31,10 @@ make -C %{name} CFLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},/etc/X11/applnk/Application}
+install -d $RPM_BUILD_ROOT{%{_bindir},/etc/X11/applnk/DockApplets}
 install -s %{name}/%{name} $RPM_BUILD_ROOT%{_bindir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/Application
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
 
 gzip -9nf README
 
@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.gz
 %attr(755,root,root) %{_bindir}/%{name}
-/etc/X11/applnk/Application/wmtetris.desktop
+/etc/X11/applnk/DockApplets/wmtetris.desktop
 
 %changelog
 * Tue May 25 1999 Piotr Czerwiñski <pius@pld.org.pl> 
