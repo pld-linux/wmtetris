@@ -1,5 +1,5 @@
 Summary:	Tetris game for the WindowMaker dock
-Summary(pl.UTF-8):   Gra Tetris dla Doku WindowMakera
+Summary(pl.UTF-8):	Gra Tetris dla Doku WindowMakera
 Name:		wmtetris
 Version:	0.2
 Release:	2
